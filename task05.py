@@ -1,9 +1,8 @@
 def count_words(text: str) -> dict:
     result = {}
-    for txt in text:
-        result[txt].lower() == text.count(txt).lower()
+    words = text.split()
+    for i in words:
+        result[i] = words.count(i)
     return result
-
 text = 'salom salom dunyo'
-result = count_words(text=text)
-print(result)
+print(count_words(text=text))
